@@ -1,0 +1,30 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+const pathname = Astro.url.pathname;
+function current(path: string) {
+  const full = `${base}${path}`;
+  if (path === '/') return pathname === `${base}/` || pathname === base;
+  return pathname.startsWith(full);
+}
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href={`${base}/`}>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <strong>두 엔트로피</strong>
+        <span>Kirchhoff–Shannon Bridge</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href={`${base}/`} aria-current={current('/') ? 'page' : undefined}>홈</a>
+      <a href={`${base}/path/`} aria-current={current('/path') ? 'page' : undefined}>학습 경로</a>
+      <a href={`${base}/foundation/00-how-to-read/`} class="copper-link">기초</a>
+      <a href={`${base}/kirchhoff/k-01-circuits-before/`} class="copper-link">키르히호프</a>
+      <a href={`${base}/shannon/s-01-boolean-relays/`} class="shannon-link">섀넌</a>
+      <a href={`${base}/bridge/b-01-conservation-metaphors/`} class="shannon-link">다리</a>
+      <a href={`${base}/glossary/`} aria-current={current('/glossary') ? 'page' : undefined}>용어집</a>
+      <a href={`${base}/lab/`} aria-current={current('/lab') ? 'page' : undefined}>실험실</a>
+    </nav>
+  </div>
+</header>

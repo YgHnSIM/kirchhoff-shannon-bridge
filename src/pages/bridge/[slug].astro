@@ -1,0 +1,30 @@
+---
+import DocLayout from '../../layouts/DocLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { getNeighbors, slugOf, TRACK_ORDER } from '../../lib/curriculum';
+import type { Track } from '../../lib/curriculum';
+
+const track = 'bridge' as Track;
+
+export async function getStaticPaths() {
+  const entries = await getCollection('bridge');
+  return entries.map((entry) => ({
+    params: { slug: slugOf(entry) },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const slug = slugOf(entry);
+const { Content } = await render(entry);
+const { prev, next } = await getNeighbors(track, slug);
+
+// Ensure curriculum order files are all present (build-time sanity)
+const missing = TRACK_ORDER[track].filter(
+  (id) => !TRACK_ORDER[track].includes(id)
+);
+void missing;
+---
+<DocLayout track={track} entry={entry} prev={prev} next={next}>
+  <Content />
+</DocLayout>

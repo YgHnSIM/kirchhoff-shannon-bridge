@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WarningCallout from '../components/WarningCallout.astro';
+import { getOrdered, hrefOf, slugOf } from '../lib/curriculum';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+const foundation = await getOrdered('foundation');
+const firstFoundation = foundation[0];
+const comingBack = foundation.find((e) => slugOf(e) === '05-coming-back');
+const twoEntropies = (await getOrdered('bridge')).find((e) => slugOf(e) === 'b-02-two-entropies');
+---
+<BaseLayout title="두 엔트로피 — Kirchhoff–Shannon Bridge" description="키르히호프의 회로·복사와 섀넌의 정보이론을 잇는 한국어 심화 미니 코스">
+  <section style="max-width:var(--wide);margin:0 auto 1rem">
+    <p class="badge both" style="margin-bottom:0.75rem">한국어 심화 미니 코스 · Dual Rail</p>
+    <h1 style="margin:0 0 0.5rem">「두 엔트로피」</h1>
+    <p style="font-size:1.1rem;color:var(--ink-muted);max-width:38rem;margin-top:0">
+      Gustav Kirchhoff의 회로·분광·복사 줄기와 Claude Shannon의 정보이론 줄기를
+      <strong style="color:var(--ink)">한 연구 노트 위에</strong> 잇습니다.
+      대학 고학년~초급 대학원 깊이. 오래 쉰 학습자도 Phase A에서 다시 걸을 수 있습니다.
+    </p>
+  </section>
+
+  <div class="dual-hero">
+    <div class="rail-panel kirchhoff">
+      <span class="rail-label">Rail A · Copper</span>
+      <div class="rail-symbol" aria-hidden="true">Σ I = 0</div>
+      <h2>키르히호프</h2>
+      <p>
+        집중정수 회로의 KCL/KVL에서 분광·복사 법칙, 흑체, 플랑크 직전까지.
+        구리빛 레일 — 전하와 전위의 보존 언어.
+      </p>
+      <a class="btn copper" href={`${base}/kirchhoff/k-01-circuits-before/`}>키르히호프 트랙 입장 →</a>
+    </div>
+    <div class="rail-panel shannon">
+      <span class="rail-label">Rail B · Cyan</span>
+      <div class="rail-symbol" aria-hidden="true">H(X)</div>
+      <h2>섀넌</h2>
+      <p>
+        불 대수 계전기에서 정보·엔트로피·원천·채널 용량, 비밀성까지.
+        청록 레일 — 불확실성과 통신의 언어.
+      </p>
+      <a class="btn cyan" href={`${base}/shannon/s-01-boolean-relays/`}>섀넌 트랙 입장 →</a>
+    </div>
+  </div>
+
+  <WarningCallout />
+
+  <section style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));margin:2rem 0">
+    <div class="lab-panel" style="margin:0">
+      <h3 style="margin-top:0">복귀 학습자</h3>
+      <p style="color:var(--ink-muted);font-size:0.92rem">
+        졸업 후 오래 쉬었다면 Phase A와 자기진단부터.
+      </p>
+      <a class="btn" href={comingBack ? hrefOf('foundation', slugOf(comingBack)) : `${base}/foundation/05-coming-back/`}>
+        학습 복귀 가이드
+      </a>
+    </div>
+    <div class="lab-panel" style="margin:0">
+      <h3 style="margin-top:0">전문가·재방문</h3>
+      <p style="color:var(--ink-muted);font-size:0.92rem">
+        \(S \neq H\) 논점과 Bridge 트랙으로 바로.
+      </p>
+      <a class="btn" href={twoEntropies ? hrefOf('bridge', slugOf(twoEntropies)) : `${base}/bridge/b-02-two-entropies/`}>
+        두 엔트로피 문서
+      </a>
+    </div>
+    <div class="lab-panel" style="margin:0">
+      <h3 style="margin-top:0">처음부터</h3>
+      <p style="color:var(--ink-muted);font-size:0.92rem">
+        읽기 규칙·수식 약속·학습 리듬.
+      </p>
+      <a class="btn" href={firstFoundation ? hrefOf('foundation', slugOf(firstFoundation)) : `${base}/path/`}>
+        이 코스를 읽는 법
+      </a>
+    </div>
+  </section>
+
+  <section style="margin-top:2.5rem;text-align:center">
+    <a class="btn ghost" href={`${base}/path/`}>전체 학습 경로 보기</a>
+    <a class="btn ghost" href={`${base}/lab/`} style="margin-left:0.5rem">실험실 위젯</a>
+    <a class="btn ghost" href={`${base}/glossary/`} style="margin-left:0.5rem">용어집</a>
+  </section>
+</BaseLayout>

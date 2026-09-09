@@ -1,0 +1,49 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/dual-rail.css';
+import 'katex/dist/katex.min.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = '키르히호프와 섀넌을 잇는 한국어 심화 미니 코스 「두 엔트로피」' } = Astro.props;
+const fullTitle = title.includes('두 엔트로피') ? title : `${title} · 두 엔트로피`;
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href={`${basePath}favicon.svg`} />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.5/index.css"
+    />
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <div class="site-wrap">
+      <Header />
+      <main class="main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

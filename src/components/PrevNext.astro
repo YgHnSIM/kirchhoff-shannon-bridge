@@ -1,0 +1,33 @@
+---
+import { hrefOf, slugOf, type Track } from '../lib/curriculum';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  track: Track;
+  prev?: CollectionEntry<Track>;
+  next?: CollectionEntry<Track>;
+}
+const { track, prev, next } = Astro.props;
+---
+<nav class="prev-next" aria-label="이전·다음 문서">
+  {
+    prev ? (
+      <a href={hrefOf(track, slugOf(prev))}>
+        <span class="label">← 이전</span>
+        {prev.data.title}
+      </a>
+    ) : (
+      <span class="empty" />
+    )
+  }
+  {
+    next ? (
+      <a class="next" href={hrefOf(track, slugOf(next))}>
+        <span class="label">다음 →</span>
+        {next.data.title}
+      </a>
+    ) : (
+      <span class="empty" />
+    )
+  }
+</nav>

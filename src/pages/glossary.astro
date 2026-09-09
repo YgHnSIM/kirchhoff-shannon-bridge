@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+const entries = await getCollection('glossary');
+const entry = entries[0];
+if (!entry) throw new Error('glossary.md not found in docs/');
+const { Content } = await render(entry);
+---
+<BaseLayout title="용어집" description="「두 엔트로피」 핵심 용어 Glossary">
+  <article class="prose">
+    <Content />
+  </article>
+</BaseLayout>

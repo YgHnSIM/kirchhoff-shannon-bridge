@@ -1,0 +1,24 @@
+---
+import katex from 'katex';
+
+interface Props {
+  title?: string;
+}
+const { title = '경고 — S ≠ H' } = Astro.props;
+const formula = katex.renderToString('S \\neq H', { throwOnError: false });
+---
+<aside class="warning-callout" role="note" aria-label={title}>
+  <p class="warn-title">
+    <span aria-hidden="true">⚠</span>
+    {title}
+  </p>
+  <p class="formula" set:html={formula} />
+  <slot>
+    <p>
+      열역학·통계역학의 엔트로피 <strong>S</strong>와 정보이론의 섀넌 엔트로피
+      <strong>H</strong>는 기호와 −∑p log p 꼴이 닮았어도
+      <strong>같은 물리량이 아닙니다.</strong> 단위·상태 공간·법칙적 지위가 다릅니다.
+      Bridge 트랙에서 명시적으로 다룹니다.
+    </p>
+  </slot>
+</aside>

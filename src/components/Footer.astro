@@ -1,0 +1,19 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong>「두 엔트로피」</strong> · Kirchhoff–Shannon Bridge<br />
+      <span>한국어 심화 미니 코스 · {year}</span>
+    </div>
+    <div>
+      <a href={`${base}/path/`}>학습 경로</a> ·
+      <a href={`${base}/glossary/`}>용어집</a> ·
+      <a href={`${base}/lab/`}>실험실</a> ·
+      <a href="https://github.com/YgHnSIM/kirchhoff-shannon-bridge">GitHub</a>
+    </div>
+    <div class="footer-warn">경고: S ≠ H · 열역학 엔트로피 ≠ 섀넌 엔트로피</div>
+  </div>
+</footer>

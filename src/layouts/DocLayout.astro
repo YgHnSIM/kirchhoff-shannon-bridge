@@ -1,0 +1,44 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import WarningCallout from '../components/WarningCallout.astro';
+import PrevNext from '../components/PrevNext.astro';
+import { TRACK_META, LEVEL_LABEL, type Track } from '../lib/curriculum';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  track: Track;
+  entry: CollectionEntry<Track>;
+  prev?: CollectionEntry<Track>;
+  next?: CollectionEntry<Track>;
+}
+const { track, entry, prev, next } = Astro.props;
+const meta = TRACK_META[track];
+const railColor =
+  meta.rail === 'kirchhoff'
+    ? 'var(--copper)'
+    : meta.rail === 'shannon'
+      ? 'var(--cyan)'
+      : meta.rail === 'both'
+        ? 'var(--copper)'
+        : 'var(--ink)';
+const showSneH = track === 'bridge' || entry.data.id === 'b-02-two-entropies';
+---
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <article class="prose">
+    <div class="track-banner" style={`--rail-color: ${railColor}`}>
+      <span class="stripe" aria-hidden="true"></span>
+      <div>
+        <span class={`badge ${meta.rail === 'kirchhoff' ? 'copper' : meta.rail === 'shannon' ? 'cyan' : meta.rail === 'both' ? 'both' : ''}`}>
+          {meta.labelKo} · {meta.label}
+        </span>
+        <span class="badge" style="margin-left:0.35rem">{LEVEL_LABEL[entry.data.level]}</span>
+      </div>
+    </div>
+
+    {showSneH && <WarningCallout />}
+
+    <slot />
+
+    <PrevNext track={track} prev={prev} next={next} />
+  </article>
+</BaseLayout>

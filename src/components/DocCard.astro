@@ -1,0 +1,31 @@
+---
+import { TRACK_META, LEVEL_LABEL, hrefOf, slugOf, type Track } from '../lib/curriculum';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  track: Track;
+  entry: CollectionEntry<Track>;
+}
+const { track, entry } = Astro.props;
+const meta = TRACK_META[track];
+const slug = slugOf(entry);
+const href = hrefOf(track, slug);
+const railColor =
+  meta.rail === 'kirchhoff'
+    ? 'var(--copper)'
+    : meta.rail === 'shannon'
+      ? 'var(--cyan)'
+      : meta.rail === 'both'
+        ? 'linear-gradient(var(--copper), var(--cyan))'
+        : 'var(--ink)';
+const badgeClass =
+  meta.rail === 'kirchhoff' ? 'copper' : meta.rail === 'shannon' ? 'cyan' : meta.rail === 'both' ? 'both' : '';
+---
+<a class="doc-card" href={href} style={`--rail-color: ${meta.rail === 'both' ? 'var(--copper)' : railColor}`}>
+  <span class="title">{entry.data.title}</span>
+  <span class="summary">{entry.data.summary}</span>
+  <span class="meta">
+    <span class={`badge ${badgeClass}`}>{meta.labelKo}</span>
+    <span class="badge">{LEVEL_LABEL[entry.data.level] ?? entry.data.level}</span>
+  </span>
+</a>

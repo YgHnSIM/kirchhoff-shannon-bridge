@@ -1,11 +1,51 @@
 # Kirchhoff–Shannon Bridge — 「두 엔트로피」
 
+> **사이트:** [https://yghnsim.github.io/kirchhoff-shannon-bridge/](https://yghnsim.github.io/kirchhoff-shannon-bridge/)  
+> **경고:** 열역학 엔트로피 \(S\) ≠ 섀넌 엔트로피 \(H\).
+
 Gustav Kirchhoff의 회로·분광·복사 줄기와 Claude Shannon의 정보이론 줄기를 잇는 **한국어 심화 미니 코스**입니다.  
 대학 고학년~초급 대학원 깊이를 목표로 하며, 학교 졸업 후 오래 쉰 학습자도 **Phase A(foundation)** 만으로 다시 걸을 수 있게 기초를 두껍게 두었습니다.
 
 > **핵심 경고:** 열역학 엔트로피 \(S\)와 섀넌 엔트로피 \(H\)는 **같은 양이 아닙니다.** Bridge 트랙에서 명시적으로 다룹니다.
 
+## 웹 사이트 (Astro)
+
+Dual Rail 디자인 — cream paper / ink / copper(키르히호프) / cyan(섀넌). 실험 노트 미학.
+
+| 경로 | 내용 |
+|------|------|
+| `/` | 듀얼 레일 입장 + 복귀·전문가 CTA |
+| `/path/` | 전체 학습 경로 |
+| `/foundation/[slug]/` 등 | `docs/` 커리큘럼 렌더 |
+| `/glossary/` | 용어집 |
+| `/lab/` | \(H(p)\) · 직렬 저항 KCL/KVL · BSC 용량 위젯 |
+
+### 로컬 실행
+
+```bash
+npm install
+npm run dev      # 개발 서버
+npm run build    # 정적 빌드 → dist/
+npm run preview  # 빌드 미리보기
+```
+
+Node.js **≥ 22.12** 필요.
+
+### GitHub Pages 배포
+
+워크플로: `.github/workflows/deploy.yml` (GitHub Actions → Pages).
+
+1. 저장소 **Settings → Pages**
+2. **Source** 를 **GitHub Actions** 로 선택
+3. `main` 푸시 후 Actions 탭에서 워크플로 성공 확인
+4. 사이트 URL: **https://yghnsim.github.io/kirchhoff-shannon-bridge/**
+
+`astro.config.mjs` 의 `site` / `base` 가 위 URL과 맞춰져 있습니다.
+
+---
+
 ## 이 저장소는
+
 
 | 항목 | 내용 |
 |------|------|

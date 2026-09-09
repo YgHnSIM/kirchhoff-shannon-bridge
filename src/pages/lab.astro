@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WarningCallout from '../components/WarningCallout.astro';
+import LabBinaryEntropy from '../components/LabBinaryEntropy.astro';
+import LabSeriesResistor from '../components/LabSeriesResistor.astro';
+import LabBSCCapacity from '../components/LabBSCCapacity.astro';
+---
+<BaseLayout title="실험실" description="이진 엔트로피, 직렬 저항 KCL/KVL, BSC 용량 — 작은 인터랙티브 위젯">
+  <div style="max-width:var(--max);margin:0 auto">
+    <h1>실험실</h1>
+    <p style="color:var(--ink-muted)">
+      본문의 수식을 손으로 만져 보는 작은 위젯입니다. 증명 대체가 아니라
+      <strong>직관 보정</strong>용입니다. 구리 레일 = 회로, 청록 레일 = 정보.
+    </p>
+    <WarningCallout />
+    <LabSeriesResistor />
+    <LabBinaryEntropy />
+    <LabBSCCapacity />
+  </div>
+</BaseLayout>
