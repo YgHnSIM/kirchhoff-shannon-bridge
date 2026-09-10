@@ -11,7 +11,7 @@ summary: Shannon의 1937년 석사논문이 불 대수와 계전기 회로를 �
 
 ## 왜 여기서 시작하는가
 
-클로드 섀넌(Claude Elwood Shannon, 1916–2001)의 이름을 정보이론과 동일시하기 쉽지만, 그의 첫 돌파구는 1948년의 《A Mathematical Theory of Communication》이 아니다. MIT 석사논문 **「A Symbolic Analysis of Relay and Switching Circuits」(1938년 AIEE 발표, 1937년 제출)** 이 그것이다. 이 문서는 그 논문이 무엇을 대응시켰는지, 왜 디지털 설계의 출발점으로 읽히는지, 그리고 이후 정보이론으로 이어지는 사고의 습관을 어떻게 예고하는지를 다룬다.
+클로드 섀넌(Claude Elwood Shannon, 1916–2001)의 이름을 정보이론과 동일시하기 쉽지만, 그의 첫 돌파구는 1948년의 《A Mathematical Theory of Communication》이 아니다. MIT 석사논문 「**A Symbolic Analysis of Relay and Switching Circuits**」 **(1938년 AIEE 발표, 1937년 제출)** 이 그것이다. 이 문서는 그 논문이 무엇을 대응시켰는지, 왜 디지털 설계의 출발점으로 읽히는지, 그리고 이후 정보이론으로 이어지는 사고의 습관을 어떻게 예고하는지를 다룬다.
 
 정보이론 트랙을 1948부터 열면 「비트와 채널」만 보이고, 그 앞의 **이산 상태를 기호로 다루는 습관**이 빠진다. 계전기 논문은 바로 그 습관의 공학적 탄생 장면이다. Kirchhoff 트랙이 연속량·보존 법칙에서 출발한다면, Shannon 트랙은 「열림/닫힘」이라는 가장 거친 이산화에서 출발한다.
 

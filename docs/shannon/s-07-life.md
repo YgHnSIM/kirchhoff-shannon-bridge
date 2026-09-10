@@ -17,13 +17,13 @@ summary: Claude Shannon의 생애와 주요 활동 — Michigan, MIT, Bell Labs,
 
 Shannon은 미시간 주에서 성장했고, **University of Michigan**에서 전기공학과 수학을 함께 공부했다(학사, 1936). 이미 수학과 장치의 경계에 서 있던 이력은 이후 논문의  습관 — 대수와 회로, 확률과 통신 — 를 예고한다.
 
-**MIT**에서 석사·박사 과정을 밟으며, Vannevar Bush의 **differential analyzer** 등 대형 아날로그 계산 장치 환경에 노출된다. 석사논문(1937 제출, 1938 AIEE 발표) **「A Symbolic Analysis of Relay and Switching Circuits」** 는 계전기 회로와 불 대수의 대응으로, 디지털 논리 설계의 고전으로 남는다(s-01). 박사(1940)는 유전학의 대수적 측면 등, 이산 구조에 대한 관심을 다른 영역으로 확장한 작업으로 알려져 있다.
+**MIT**에서 석사·박사 과정을 밟으며, Vannevar Bush의 **differential analyzer** 등 대형 아날로그 계산 장치 환경에 노출된다. 석사논문(1937 제출, 1938 AIEE 발표) 「**A Symbolic Analysis of Relay and Switching Circuits**」 는 계전기 회로와 불 대수의 대응으로, 디지털 논리 설계의 고전으로 남는다(s-01). 박사(1940)는 유전학의 대수적 측면 등, 이산 구조에 대한 관심을 다른 영역으로 확장한 작업으로 알려져 있다.
 
 ## Bell Labs
 
 1940년대 초 Shannon은 **Bell Telephone Laboratories**에 합류한다. 전화망·전송·잡음·스위칭이 일상인 연구소는 「통신을 수학 문제로」 정식화하기에 적합한 환경이었다. 여기서 무잡음·잡음 채널, 소스·채널 부호화의 뼈대가 자란다.
 
-1948년 *Bell System Technical Journal*에 실린 **「A Mathematical Theory of Communication」** (2편)은 정보·엔트로피·용량의 표준 문헌이 된다(s-02–s-05). 이듬해 **「Communication Theory of Secrecy Systems」(1949)** 는 같은 도구로 비밀 통신을 다룬다(s-06). 두 논문은 「전달」과 「차단」을 한 언어로 묶는다.
+1948년 *Bell System Technical Journal*에 실린 「**A Mathematical Theory of Communication**」 (2편)은 정보·엔트로피·용량의 표준 문헌이 된다(s-02–s-05). 이듬해 「**Communication Theory of Secrecy Systems**」 **(1949)** 는 같은 도구로 비밀 통신을 다룬다(s-06). 두 논문은 「전달」과 「차단」을 한 언어로 묶는다.
 
 Bell Labs 시기에는 샘플링·펄스 부호, 피드백 시스템, 체스·학습 기계에 대한 사고 실험과 기고도 이어진다. 모두가 깊이 같은 것은 아니나, *이산·확률·기계*라는 축은 일관된다.
 

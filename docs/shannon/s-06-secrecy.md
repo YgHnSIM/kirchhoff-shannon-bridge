@@ -11,7 +11,7 @@ summary: Communication Theory of Secrecy Systems(1949)의 정보이론적 비밀
 
 ## 범위 고지
 
-이 문서는 Shannon의 **「Communication Theory of Secrecy Systems」(Bell System Technical Journal, 1949)** 가 제시한 *개념* — 정보가 새는 양, 완전 비밀 — 을 다룬다. **암호 시스템을 깨는 방법, 키 탈취, 구현 공격, 실전 설계 레시피**는 다루지 않는다. 「도청자가 암호문만 볼 때 평문에 대해 얼마나 불확실성이 남는가」라는 *측도*의 이야기다.
+이 문서는 Shannon의 「**Communication Theory of Secrecy Systems**」 **(Bell System Technical Journal, 1949)** 가 제시한 *개념* — 정보가 새는 양, 완전 비밀 — 을 다룬다. **암호 시스템을 깨는 방법, 키 탈취, 구현 공격, 실전 설계 레시피**는 다루지 않는다. 「도청자가 암호문만 볼 때 평문에 대해 얼마나 불확실성이 남는가」라는 *측도*의 이야기다.
 
 ## 정의: 비밀을 정보로 재기
 

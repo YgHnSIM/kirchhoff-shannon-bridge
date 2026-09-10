@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getAllDocs, TRACK_META, hrefOf, slugOf, type Track } from '../lib/curriculum';
+import katex from 'katex';
+const sNeqH = katex.renderToString('S \\neq H', { throwOnError: false });
 
 const all = await getAllDocs();
 const phaseColor: Record<Track, string> = {
@@ -21,8 +23,8 @@ const phaseIntro: Record<Track, string> = {
     <h1>학습 경로</h1>
     <p style="color:var(--ink-muted)">
       CURRICULUM.md에 고정된 순서입니다. 복귀 학습자는 foundation을 끝까지,
-      이미 회로·정보에 익숙하면 Bridge의 \(S \neq H\)부터 건너뛸 수도 있습니다 —
-      다만 기초 문서의 「한계」 절은 한 번 훑는 것을 권합니다.
+      이미 회로·정보에 익숙하면 Bridge의 <span set:html={sNeqH} />부터 건너뛸 수도 있습니다 —
+      다만 기초 문서의 "한계" 절은 한 번 훑는 것을 권합니다.
     </p>
 
     {
