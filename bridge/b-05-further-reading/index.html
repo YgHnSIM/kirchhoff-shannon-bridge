@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Bridge 트랙 이후를 위한 큐레이션 서지 — 1차 문헌, 표준 교과서, 양자·열역학 입문, 온라인 백과. 장문 복제 없이 길잡이만."><meta name="generator" content="Astro v7.3.2"><link rel="icon" type="image/svg+xml" href="/kirchhoff-shannon-bridge/favicon.svg"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.5/index.css"><title>더 읽기 — 원논문·교과서·백과 · 두 엔트로피</title><link rel="stylesheet" href="/kirchhoff-shannon-bridge/_astro/BaseLayout.DZUjBYdt.css"></head><body><div class="site-wrap"><header class="site-header"><div class="header-inner"><a class="brand" href="/kirchhoff-shannon-bridge/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>두 엔트로피</strong><span>Kirchhoff–Shannon Bridge</span></span></a><nav class="nav" aria-label="주요 메뉴"><a href="/kirchhoff-shannon-bridge/">홈</a><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a><a href="/kirchhoff-shannon-bridge/foundation/00-how-to-read/" class="copper-link">기초</a><a href="/kirchhoff-shannon-bridge/kirchhoff/k-01-circuits-before/" class="copper-link">키르히호프</a><a href="/kirchhoff-shannon-bridge/shannon/s-01-boolean-relays/" class="shannon-link">섀넌</a><a href="/kirchhoff-shannon-bridge/bridge/b-01-conservation-metaphors/" class="shannon-link">다리</a><a href="/kirchhoff-shannon-bridge/glossary/">용어집</a><a href="/kirchhoff-shannon-bridge/lab/">실험실</a></nav></div></header><main class="main"><article class="prose"><div class="track-banner" style="--rail-color: var(--copper)"><span class="stripe" aria-hidden="true"></span><div><span class="badge both">다리 · Bridge</span><span class="badge" style="margin-left:0.35rem">심화</span></div></div><aside class="warning-callout" role="note" aria-label="경고 — S ≠ H"><p class="warn-title"><span aria-hidden="true">⚠</span>경고 — S ≠ H</p><p class="formula"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S \neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord katex-vbox"><span class="katex-thinbox"><span class="rlap"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="katex-inner"><span class="mord"><span class="mrel"></span></span></span><span class="katex-fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span></p><p>열역학·통계역학의 엔트로피 <strong>S</strong>와 정보이론의 섀넌 엔트로피<strong>H</strong>는 기호와 −∑p log p 꼴이 닮았어도<strong>같은 물리량이 아닙니다.</strong> 단위·상태 공간·법칙적 지위가 다릅니다. Bridge 트랙에서 명시적으로 다룹니다.</p></aside><h1 id="더-읽기--원논문교과서백과">더 읽기 — 원논문·교과서·백과</h1>
+<p>이 문서는 Bridge 트랙의 닫는 지도이다. <strong>저작권이 있는 장문 발췌는 싣지 않는다.</strong> 제목·해·권호·장 단위의 길잡이와, 공개 백과·프로젝트 링크 수준의 안내만 제공한다. 원문은 도서관·합법적 아카이브·구매 경로로 확인할 것.</p>
+<p>읽기 원칙은 커리큘럼과 같다: 정의 → 왜 그 정의인가 → 당시 문제 → 수식 → 한계. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>와 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>를 동일시하는 이차 문헌을 만날 경우, <code>b-02</code>의 경고로 돌아와 걸러 읽라.</p>
+<h2 id="1-1차-문헌-primary-papers--구조만-파악">1. 1차 문헌 (primary papers) — 구조만 파악</h2>
+<p>장문을 베끼지 말고, <strong>문제 설정·정의·주요 정리의 위치</strong>를 표시하며 읽는다.</p>
+<h3 id="키르히호프복사회로-쪽">키르히호프·복사·회로 쪽</h3>
+<ul>
+<li>Kirchhoff의 회로 법칙·네트워크에 관한 1850년대 전후 논문들 — KCL·KVL형 제약이 어떻게 문장·식으로 고정되는지.</li>
+<li>Kirchhoff의 방출·흡수·흑체 관련 논저 — 「보편 함수」 주장의 정확한 조건(평형, 온도 등).</li>
+<li>Planck의 흑체 복사 논문들 (1900–1901 전후) — 보간 공식에서 에너지 요소·통계적 가중으로 가는 논증의 골격.</li>
+<li>(배경) Boltzmann의 통계역학적 엔트로피 정식에 가까운 논저 — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>와 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Ω</span></span></span></span>의 연결.</li>
+</ul>
+<h3 id="통신정보-쪽">통신·정보 쪽</h3>
+<ul>
+<li>H. Nyquist, 전신 전송 속도·열잡음 관련 논문 (1920년대) — 「초당 독립 성분」과 잡음 스펙트럼의 문제 의식.</li>
+<li>R. V. L. Hartley, “Transmission of Information” (1928) — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>log</mi><mo>⁡</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">\log N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">N</span></span></span></span>형 정보량의 고전적 정식.</li>
+<li>C. E. Shannon, “A Mathematical Theory of Communication,” <em>Bell System Technical Journal</em> (1948) — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>, 소스·채널 모형, 용량. <strong>장문 인용 금지;</strong> 섹션 제목과 정리 번호만 메모할 것.</li>
+<li>C. E. Shannon, 비밀 통신·암호 관련 보고서/논문 (1940년대; 공개본) — <code>s-06</code> 연장.</li>
+<li>Shannon의 스위칭·불리언 회로 석사 논문 (1937/1938 출판) — 축 (1)의 1차 출처.</li>
+</ul>
+<h3 id="읽는-순서-제안-bridge-이후">읽는 순서 제안 (Bridge 이후)</h3>
+<ol>
+<li>Hartley (짧음) → Shannon 1948의 정의·엔트로피·용량 절만 골격.</li>
+<li>Nyquist (샘플링·잡음 중 관심 쪽).</li>
+<li>Planck 흑체로 돌아가 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>의 역할이 <strong>열역학</strong>임을 재확인 (<code>b-02</code>).</li>
+<li>Kirchhoff 회로·복사 중 한 축만 깊게.</li>
+</ol>
+<h2 id="2-교과서-textbooks">2. 교과서 (textbooks)</h2>
+<h3 id="정보이론">정보이론</h3>
+<ul>
+<li><strong>Thomas M. Cover &#x26; Joy A. Thomas, <em>Elements of Information Theory</em></strong><br>
+— <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>, 상대 엔트로피, 상호정보, 소스·채널 코딩의 표준 입문. Bridge 이후 <strong>정보 쪽의 주 교재</strong>로 권한다. 연습 문제와 함께 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S\neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 감각을 유지할 것.</li>
+</ul>
+<h3 id="전자기회로-맥락">전자기·회로 맥락</h3>
+<ul>
+<li><strong>John D. Jackson, <em>Classical Electrodynamics</em></strong><br>
+— 연속 방정식·보존 법칙·복사 장의 대학원 표준. KCL의 연속체적 뿌리를 엄밀히 보고 싶을 때.</li>
+<li>또는 <strong>학부 전자기학</strong> (예: Griffiths <em>Introduction to Electrodynamics</em> 등)<br>
+— 전하 보존, 회로와 장의 경계, 집결 소자 이상화. Jackson 전이 부담이면 여기부터.</li>
+</ul>
+<p>회로망 이론 자체를 더 보려면 학부 회로이론·그래프 이론 기반 네트워크 교재를 Phase B와 병행.</p>
+<h3 id="열역학통계역학양자-입문">열역학·통계역학·양자 입문</h3>
+<ul>
+<li>학부 <strong>열역학</strong> 교재의 엔트로피·제2법칙 장 — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>의 조작적·공리적 도입.</li>
+<li>학부 <strong>통계역학</strong> 입문 — <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>k</mi><mi>ln</mi><mo>⁡</mo><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">S=k\ln\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span></span></span></span>, 기브스 엔트로피, 앙상블.</li>
+<li>양자역학 <strong>입문</strong> 한 권 — 플랑크 상수·에너지 준위·흑체 이야기의 현대적 재서술용 (과장된 「비트 신화」 필터와 함께).</li>
+</ul>
+<p>특정 판본의 장문을 옮기지 말 것. <strong>장·절 단위로만</strong> 참조 목록에 적는다.</p>
+<h3 id="역사부가">역사·부가</h3>
+<ul>
+<li>정보 이론·벨 연구소·양자 초엽에 관한 <strong>과학사</strong> 이차 문헌 (도서관 검색).</li>
+<li>키르히호프·섀넌 전기 (단행본) — <code>b-04</code> 축을 살로 채울 때.</li>
+</ul>
+<h2 id="3-온라인-백과공개-자원-encyclopedias--curated-online">3. 온라인 백과·공개 자원 (encyclopedias / curated online)</h2>
+<p>정확한 URL은 변동될 수 있으므로, 검색어와 프로젝트 이름 중심으로 적는다. 접속일·판본을 메모하는 습관을 권한다.</p>
+<ul>
+<li><strong>Stanford Encyclopedia of Philosophy</strong> — “Information,” “Thermodynamic Asymmetry of Time,” “Philosophy of Statistical Mechanics” 등. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>/<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 철학적 구분에 유용.</li>
+<li><strong>Scholarpedia / Wikipedia (English)</strong> — “Shannon entropy,” “Entropy (statistical thermodynamics),” “Kirchhoff’s circuit laws,” “Kirchhoff’s law of thermal radiation,” “Channel capacity,” “Landauer’s principle.”<br>
+— <strong>입구</strong>로만 쓰고, 수식·역사 주장은 1차·교과서로 검증.</li>
+<li><strong>MacTutor History of Mathematics</strong> — Kirchhoff, Shannon, Planck, Nyquist 등 인물 항목.</li>
+<li><strong>IEEE / Bell System</strong> 관련 역사 페이지, 공개된 Shannon 자료집 안내 (합법 공개분만).</li>
+<li>아카이브: <strong>arXiv</strong>의 정보 열역학·리뷰 논문은 가교 주제용이나, <code>b-02</code> 경고를 켜고 읽을 것.</li>
+</ul>
+<h2 id="4-주제에-따른-최소-경로">4. 주제에 따른 최소 경로</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>목적</th><th>최소 세트</th></tr></thead><tbody><tr><td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>를 연습 문제로 체화</td><td>Cover &#x26; Thomas (해당 장) + Shannon 1948 골격</td></tr><tr><td>KCL의 물리 뿌리</td><td>학부 EM 전하 보존 + (선택) Jackson</td></tr><tr><td><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>를 다시 붙잡기</td><td>학부 열역학 + 통계역학 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>ln</mi><mo>⁡</mo><mi mathvariant="normal">Ω</mi></mrow><annotation encoding="application/x-tex">k\ln\Omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">ln</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">Ω</span></span></span></span></td></tr><tr><td>흑체→비트 서사의 검증</td><td>Planck 1차 골격 + Nyquist/Hartley + <code>b-03</code></td></tr><tr><td>인물 비교 살붙이기</td><td>MacTutor/전기 + <code>k-07</code>/<code>s-07</code></td></tr><tr><td>가교(정보 열역학)</td><td>Landauer 리뷰급 이차 문헌 — <strong>환원 과장 주의</strong></td></tr></tbody></table>
+<h2 id="5-읽지-말아야-할-함정-짧은-검열-목록">5. 읽지 말아야 할 함정 (짧은 검열 목록)</h2>
+<ul>
+<li>「엔트로피 = 정보」한 줄로 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>와 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>를 합치는 대중서의 정의 장 — 자극은 허용, <strong>정의 대치는 거부</strong>.</li>
+<li>원논문 전체를 블로그에 무단 전재한 페이지 — 저작·정확성 모두 위험.</li>
+<li>「키르히호프가 이미 정보이론을 했다」는 식의 시대착오적 유튜브·SNS 요약.</li>
+</ul>
+<h2 id="흔한-오개념">「흔한 오개념」</h2>
+<ul>
+<li>「더 읽기 목록의 책은 모두 처음부터 끝까지 읽어야 한다」 — 아니오. 장·절 단위 큐레이션이 목적이다.</li>
+<li>「백과 항목이면 충분하다」 — 입구일 뿐, 정리의 가설·증명은 교과서·1차로.</li>
+<li>「가교 리뷰를 읽으면 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S=H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>가 증명된다」 — <code>b-02</code>로 복귀.</li>
+</ul>
+<h2 id="한계">한계</h2>
+<p>이 목록은 2020년대 미니 코스 기준으로 고른 <strong>시작 지도</strong>이며, 완전 서지가 아니다. 한국어 번역본이 있는 경우 번역 품질을 원문과 대조할 것. 판본·연도는 도서관 레코드로 확정하라.</p>
+<hr>
+<h2 id="핵심-정리">핵심 정리</h2>
+<ul>
+<li>1차 문헌은 <strong>골격·정의·정리 위치</strong>만; 장문 복제 금지.</li>
+<li>정보: Cover &#x26; Thomas. 회로·보존: Jackson 또는 학부 EM. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>: 열역학·통계역학 입문.</li>
+<li>온라인 백과는 입구; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S\neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 필터를 끄지 말 것.</li>
+<li>Bridge는 여기서 닫히고, 심화는 위 경로로 열린다.</li>
+</ul>
+<h2 id="연습">연습</h2>
+<ol>
+<li>Cover &#x26; Thomas에서 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 정의 장과, 학부 열역학에서 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span> 정의 장을 나란히 펼친다(가정). 첫 정의 문장만 비교해 「조작」이 어떻게 다른지 네 줄로 쓰라.</li>
+<li>Shannon 1948의 목차만 보고, 본 코스 Phase C 문서(<code>s-02</code>–<code>s-05</code>)와 대응표를 만들어 보라.</li>
+<li>(힌트) Landauer 원리 리뷰 하나를 고를 때, 「증명된 것 / 모형 의존인 것 / 은유인 것」 세 칸 표를 만들어 채워 보라.</li>
+</ol>
+<p><strong>해답 스케치.</strong> (1) <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>는 확률분포의 범함수; <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi></mrow><annotation encoding="application/x-tex">S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span></span></span></span>는 열량·온도 또는 앙상블과 연결된 상태 함수 — 조작 언어가 통신 vs 열. (2) 예: 소스·엔트로피→<code>s-03</code>, 채널·용량→<code>s-05</code> 등. (3) 비트 소거와 열 방출의 부등식은 모형 가설 하에 논의; 「모든 정보는 열」은 은유 칸.</p>
+<h2 id="더-읽기">더 읽기</h2>
+<ul>
+<li>본 문서가 곧 「더 읽기」이다. 트랙 안으로 돌아가려면 <code>b-01</code>–<code>b-04</code>와 glossary.</li>
+<li>프로젝트 루트 <code>README.md</code>의 문서 인덱스.</li>
+</ul>
+<h2 id="다음-문서">다음 문서</h2>
+<p>Bridge 트랙은 여기까지이다.<br>
+→ 복습이 필요하면 Phase A <code>00-how-to-read.md</code> / <code>05-coming-back.md</code>로.<br>
+→ 용어는 <code>docs/glossary.md</code>.<br>
+→ 회로·정보를 각각 더 파려면 Phase B·C의 미완 문서·원논문 경로로.</p><nav class="prev-next" aria-label="이전·다음 문서"><a href="/kirchhoff-shannon-bridge/bridge/b-04-compare-lives/"><span class="label">← 이전</span>두 생애 — 회로·현상·이중의 걸작</a><span class="empty"></span></nav></article></main><footer class="site-footer"><div class="footer-inner"><div><strong>「두 엔트로피」</strong> · Kirchhoff–Shannon Bridge<br><span>한국어 심화 미니 코스 · 2026</span></div><div><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a> ·<a href="/kirchhoff-shannon-bridge/glossary/">용어집</a> ·<a href="/kirchhoff-shannon-bridge/lab/">실험실</a> ·<a href="https://github.com/YgHnSIM/kirchhoff-shannon-bridge">GitHub</a></div><div class="footer-warn">경고: S ≠ H · 열역학 엔트로피 ≠ 섀넌 엔트로피</div></div></footer></div></body></html>

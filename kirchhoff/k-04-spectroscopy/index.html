@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="프라운호퍼선, 분젠–키르히호프 분광, 방출·흡수 대응, 세슘·루비듐 발견의 맥락."><meta name="generator" content="Astro v7.3.2"><link rel="icon" type="image/svg+xml" href="/kirchhoff-shannon-bridge/favicon.svg"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.5/index.css"><title>분광학 — 프라운호퍼선에서 원소 지문까지 · 두 엔트로피</title><link rel="stylesheet" href="/kirchhoff-shannon-bridge/_astro/BaseLayout.DZUjBYdt.css"></head><body><div class="site-wrap"><header class="site-header"><div class="header-inner"><a class="brand" href="/kirchhoff-shannon-bridge/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>두 엔트로피</strong><span>Kirchhoff–Shannon Bridge</span></span></a><nav class="nav" aria-label="주요 메뉴"><a href="/kirchhoff-shannon-bridge/">홈</a><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a><a href="/kirchhoff-shannon-bridge/foundation/00-how-to-read/" class="copper-link">기초</a><a href="/kirchhoff-shannon-bridge/kirchhoff/k-01-circuits-before/" class="copper-link">키르히호프</a><a href="/kirchhoff-shannon-bridge/shannon/s-01-boolean-relays/" class="shannon-link">섀넌</a><a href="/kirchhoff-shannon-bridge/bridge/b-01-conservation-metaphors/" class="shannon-link">다리</a><a href="/kirchhoff-shannon-bridge/glossary/">용어집</a><a href="/kirchhoff-shannon-bridge/lab/">실험실</a></nav></div></header><main class="main"><article class="prose"><div class="track-banner" style="--rail-color: var(--copper)"><span class="stripe" aria-hidden="true"></span><div><span class="badge copper">키르히호프 · Kirchhoff</span><span class="badge" style="margin-left:0.35rem">핵심</span></div></div><h1 id="분광학--프라운호퍼선에서-원소-지문까지">분광학 — 프라운호퍼선에서 원소 지문까지</h1>
+<h2 id="이-문서에서-하는-일">이 문서에서 하는 일</h2>
+<p>키르히호프의 두 번째 큰 무대는 회로가 아니라 <strong>빛과 물질</strong>이다. 1850년대 말 하이델베르크에서 로베르트 분젠(Robert Wilhelm Bunsen, 1811–1899)과 함께한 연구는, 스펙트럼선이 <strong>원소의 지문</strong>임을 실험·이론적으로 고정했다. 이 문서는 프라운호퍼선에서 Cs/Rb 발견까지의 논리적·역사적 사슬을 대학 고학년 톤으로 정리한다. (열복사 법칙 자체는 k-05.)</p>
+<h2 id="프라운호퍼선--태양-스펙트럼의-어두운-선">프라운호퍼선 — 태양 스펙트럼의 어두운 선</h2>
+<p>요제프 폰 프라운호퍼(Joseph von Fraunhofer, 1787–1826)는 1814년경 태양 스펙트럼에서 수많은 <strong>어두운 선(dark lines)</strong> 을 관측·지도화했다. 오늘날 <strong>프라운호퍼선(Fraunhofer lines)</strong> 이라 부른다. 그는 주요 선에 A, B, C, D, … 같은 기호를 붙였고, D선(노란 이중선) 등은 이후 나트륨과 연결된다.</p>
+<p>프라운호퍼 자신은 그 선의 <em>기원</em>을 현대적 원자론으로 설명하지 못했다. 19세기 중엽까지 가설은 분분했다.</p>
+<ul>
+<li>대기·망원경·프리즘의 흡수인가?</li>
+<li>태양 대기의 무엇인가가 특정 색만 빼앗는가?</li>
+<li>지구 대기선의 혼입인가?</li>
+</ul>
+<p>핵심은 <strong>연속 스펙트럼 위의 결손</strong>이 재현 가능한 <em>지도</em>로 남았다는 점이다. 지도가 있으면 “실험실 불꽃의 밝은 선”과 겹쳐 볼 수 있다.</p>
+<h2 id="분젠의-불꽃-키르히호프의-프리즘">분젠의 불꽃, 키르히호프의 프리즘</h2>
+<p>분젠은 분석화학자였다. 그의 <strong>분젠 버너(Bunsen burner)</strong> 는 그을림이 적은 뜨거운 불꽃을 만들어, 시료의 <strong>불꽃색</strong>을 관찰하기에 유리했다. 그러나 맨눈의 색은 겹치고 주관적이다.</p>
+<p>키르히호프는 광학·물리 쪽의 훈련으로, 불꽃 빛을 <strong>분광기(spectroscope)</strong> — 슬릿·프리즘(또는 회절) · 망원부 — 로 펼쳐 <strong>선스펙트럼(line spectrum)</strong> 을 보게 했다. 1859–1860년 하이델베르크에서의 공동 작업이 전환점이다.</p>
+<p>관찰의 요지:</p>
+<ol>
+<li>각 금속(또는 그 염)을 불꽃에 넣으면 <strong>고유한 밝은 선</strong>들이 나타난다.</li>
+<li>그 밝은 선의 파장은, 태양 스펙트럼의 <em>특정 어두운 선</em>과 일치하는 경우가 있다. (대표: 나트륨 D선 ↔ 프라운호퍼 D)</li>
+<li>따라서 태양 대기에 그 원소가 존재한다고 <em>추론</em>할 수 있다 — 실험실 지문과 천체 지문의 대조.</li>
+</ol>
+<p>이것은 “색깔”이 아니라 <strong>파장으로 식별되는 불연속 지문</strong>으로의 전환이다.</p>
+<h2 id="방출과-흡수의-대응--분광학의-핵심-논리">방출과 흡수의 대응 — 분광학의 핵심 논리</h2>
+<p>키르히호프는 단순한 목록 작성에 멈추지 않았다. 그는 다음을 명확히 했다.</p>
+<blockquote>
+<p>같은 물질이, 같은 파장에서, <strong>방출(emission)</strong> 에도 <strong>흡수(absorption)</strong> 에도 관여할 수 있다. 어느 쪽이 관측되느냐는 광원·배경·온도 조건에 달려 있다.</p>
+</blockquote>
+<p>전형적인 교실 실험(이상화):</p>
+<ul>
+<li>뜨거운 나트륨 불꽃만 보면 → 노란 <strong>방출선</strong>.</li>
+<li>더 뜨거운 연속광(아크 등) 앞에 상대적으로 찬 나트륨 증기를 두면 → 같은 파장에 <strong>흡수선</strong>.</li>
+</ul>
+<p>태양의 경우, 광구의 연속 복사 앞을 상대적으로 저온인 태양 대기 층이 가리면서 흡수선이 생긴다는 그림이 성립한다. (현대 항성대기 모형은 훨씬 정교하지만, <em>논리의 뼈대</em>는 이 대응이다.)</p>
+<p>이 통찰은 k-05의 <strong>열복사 법칙(방출능=흡수능)</strong> 과 같은 지적 흐름에 있다. 분광학 문서에서는 “선 위치의 일치 = 같은 물질”이라는 <strong>식별 논리</strong>에 집중하고, 연속 스펙트럼의 보편함수는 다음 문서로 미룬다.</p>
+<h2 id="원소-지문--분석화학의-재정의">원소 지문 — 분석화학의 재정의</h2>
+<p>분젠–키르히호프 분광은 분석화학을 바꿨다.</p>
+<ul>
+<li><strong>정성:</strong> 미량 원소도 선이 보이면 존재를 주장할 수 있다. (검출 한계는 장치·들뜸 조건에 의존.)</li>
+<li><strong>선택성:</strong> 화학적 분리만으로 어려운 이웃 원소도 선 패턴으로 구분 가능한 경우가 많다.</li>
+<li><strong>원격성:</strong> 시료를 “만지지” 않고도 — 태양처럼 — 조성 정보를 얻는다.</li>
+</ul>
+<p>동시에 한계도 분명하다.</p>
+<ul>
+<li>선의 <em>강도</em>만으로 곧바로 정량 농도를 읽기 어렵다. (들뜸 온도, 자기흡수, 장치 함수, 행렬 효과.)</li>
+<li>모든 원소가 가시영역에서 쉬운 불꽃 선을 주는 것은 아니다.</li>
+<li>분자·밴드 스펙트럼, 이온선, 제펠만·스탁 효과 등은 이후의 과제다.</li>
+</ul>
+<p>이 코스의 수준에서는 “지문 = 파장 집합의 재현 가능한 패턴”이면 충분하다.</p>
+<h2 id="세슘과-루비듐--발견의-맥락">세슘과 루비듐 — 발견의 맥락</h2>
+<p>분젠과 키르히호프는 광천수·광물 시료의 스펙트럼에서 <strong>기존 원소에 없는 선</strong>을 보고 새 원소를 주장했다.</p>
+<ul>
+<li><strong>세슘(caesium, Cs), 1860.</strong> 이름 어원은 라틴어 <em>caesius</em>(하늘빛 회색·푸른빛). 특징적인 <strong>청색 선</strong>이 이름에 남았다. 광천수 농축물에서 확인.</li>
+<li><strong>루비듐(rubidium, Rb), 1861.</strong> 어원 <em>rubidus</em>(짙은 빨강). <strong>적색 선</strong>이 두드러졌다. 레피돌라이트(운모류) 등에서.</li>
+</ul>
+<p>역사적으로 중요한 점:</p>
+<ol>
+<li>발견의 <em>일차 증거</em>가 화학적 거동만이 아니라 <strong>스펙트럼선</strong>이었다.</li>
+<li>이후 화학적 분리·원자량 측정이 뒤를 받쳐 “원소”로 공인되는 과정이 이어졌다.</li>
+<li>알칼리 금속 족(Na, K에 이어 Cs, Rb)의 스펙트럼·화학적 유사성은, 훗날 주기율·원자 구조 논의의 재료가 된다. (이 코스에서 보어 모형까지 강제하지 않는다.)</li>
+</ol>
+<p>과장하지 말 것: 두 사람이 “주기율표를 만들었다”는 아니다. 彼らは <strong>분광 지문으로 새 원소를 최초로 잡아낸 대표적 사례</strong>를 남겼다.</p>
+<h2 id="회로에서-빛으로--같은-사람의-두-문제">회로에서 빛으로 — 같은 사람의 두 문제</h2>
+<p>회로 법칙(1845)과 분광·복사(1859–) 사이에는 십수 년이 있다. 공통점은 “복잡하게 얽힌 현상을 <strong>재현 가능한 법칙·식별 규칙</strong>으로 환원한다”는 스타일이다.</p>
+<ul>
+<li>회로: 위상 구속 + 구성 관계 → 전류·전압 결정.</li>
+<li>분광: 선 파장 ↔ 물질; 방출/흡수 대응 → 천체·시료 식별.</li>
+</ul>
+<p>물리량은 다르지만, <strong>측정 가능한 불변량(선 위치, 방정식의 독립성)</strong> 을 중심에 둔다는 점에서 키르히호프적이다.</p>
+<h2 id="흔한-오개념">흔한 오개념</h2>
+<ol>
+<li>
+<p><strong>“프라운호퍼선은 프라운호퍼가 원소를 발견했다는 뜻이다.”</strong><br>
+아니다. 그는 선을 <em>지도화</em>했다. 원소 대응은 이후(특히 분젠–키르히호프 및 동시대 연구)의 일이다.</p>
+</li>
+<li>
+<p><strong>“밝은 선이 있는 원소만 태양에 있다.”</strong><br>
+태양에서는 주로 <em>흡수선</em>으로 보인다. 같은 파장의 방출/흡수 대응을 이해해야 한다.</p>
+</li>
+<li>
+<p><strong>“스펙트럼선 = 원자핵 지문.”</strong><br>
+가시·자외선 분광의 선은 (현대적으로) 전자 상태 전이와 관련된다. 핵 지문은 다른 에너지 척도(감마 등)의 이야기다.</p>
+</li>
+<li>
+<p><strong>“Cs/Rb는 화학 없이 스펙트럼만으로 ‘완성’되었다.”</strong><br>
+선의 발견이 결정적이었으나, 화학적 확인·원자량이 원소 공인을 완성한다.</p>
+</li>
+</ol>
+<h2 id="한계">한계</h2>
+<ul>
+<li>이 문서는 양자역학적 선택 규칙·항 기호를 전개하지 않는다. “왜 그 파장인가”의 미시 이론은 20세기 과제다.</li>
+<li>천체 스펙트럼의 시선속도·팽창·항성풍 등은 식별 논리의 <em>응용</em>이며 여기선 다루지 않는다.</li>
+<li>열복사의 연속 스펙트럼과 보편함수 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mi>λ</mi></msub><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B_\lambda(T)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0502em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">λ</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="mclose">)</span></span></span></span> 는 k-05–k-06으로 이어진다.</li>
+</ul>
+<h2 id="핵심-정리">핵심 정리</h2>
+<ul>
+<li>프라운호퍼선은 태양 스펙트럼의 재현 가능한 어두운 선 지도다.</li>
+<li>분젠–키르히호프 분광은 불꽃의 방출선을 파장 지문으로 만들고, 태양 흡수선과 대조해 원소를 식별했다.</li>
+<li>같은 물질·같은 파장에서의 방출·흡수 대응이 논리의 핵이다.</li>
+<li>Cs(1860)·Rb(1861)는 그 지문 방법으로 발견된 원소의 대표 사례다.</li>
+</ul>
+<h2 id="연습">연습</h2>
+<ol>
+<li>
+<p>실험실에서 나트륨 방출 D선을 본 뒤, 연속 광원 앞에 나트륨 증기를 두었더니 같은 파장에 어두운 선이 생겼다. “빛이 사라졌으니 에너지 보존이 깨졌다”는 말에 짧게 반박하라.</p>
+<p><em>힌트.</em> 흡수 후 재방출·열화·다른 방향으로의 산란 등을 생각하라. 광검출기의 <em>시선 방향</em> 강도만의 문제일 수 있다.</p>
+<p><strong>해답 스케치.</strong> 흡수된 에너지는 원자/기체에 전달된 뒤 다른 방향 재방출·충돌 열화 등으로 간다. 한 시준선상의 스펙트럼 결손이 우주적 에너지 비보존을 뜻하지 않는다.</p>
+</li>
+<li>
+<p>프라운호퍼 D선과 실험실 나트륨 D선이 “같다”고 말하려면, 실험적으로 무엇을 일치시켜야 하는지 두 가지 이상 쓰라. (예: 파장 보정 방법.)</p>
+</li>
+<li>
+<p>미지 광천수에서 알려진 알칼리 선 외에 새로운 청색 선이 반복 관측되었다. 새 원소 주장에 들어가기 전, 분광·화학적으로 점검할 대안 가설을 두 가지 제시하라.</p>
+</li>
+</ol>
+<h2 id="더-읽기">더 읽기</h2>
+<ul>
+<li>Fraunhofer의 태양 스펙트럼 지도에 대한 과학사 개설.</li>
+<li>Bunsen &#x26; Kirchhoff의 1859–1861 분광 관련 보고(원전은 장문 복제 없이 참조).</li>
+<li>현대 입문: 원자 분광의 실험 개요(교재 1장 수준).</li>
+</ul>
+<h2 id="다음-문서">다음 문서</h2>
+<p>다음: <a href="./k-05-radiation-laws.md">k-05-radiation-laws.md</a> — 방출=흡수, 흑체, 열복사 법칙.</p><nav class="prev-next" aria-label="이전·다음 문서"><a href="/kirchhoff-shannon-bridge/kirchhoff/k-03-networks/"><span class="label">← 이전</span>회로망 — 다단자·직렬병렬·세지 말아야 할 것</a><a class="next" href="/kirchhoff-shannon-bridge/kirchhoff/k-05-radiation-laws/"><span class="label">다음 →</span>열복사 법칙 — 방출·흡수·흑체</a></nav></article></main><footer class="site-footer"><div class="footer-inner"><div><strong>「두 엔트로피」</strong> · Kirchhoff–Shannon Bridge<br><span>한국어 심화 미니 코스 · 2026</span></div><div><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a> ·<a href="/kirchhoff-shannon-bridge/glossary/">용어집</a> ·<a href="/kirchhoff-shannon-bridge/lab/">실험실</a> ·<a href="https://github.com/YgHnSIM/kirchhoff-shannon-bridge">GitHub</a></div><div class="footer-warn">경고: S ≠ H · 열역학 엔트로피 ≠ 섀넌 엔트로피</div></div></footer></div></body></html>

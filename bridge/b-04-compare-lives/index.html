@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="키르히호프와 섀넌의 생애·업적을 세 축(회로의 수학화, 모호의 측정 가능화, 초기 서명 결과와 후기 제2의 걸작)으로 비교하고 시대차를 명시한다."><meta name="generator" content="Astro v7.3.2"><link rel="icon" type="image/svg+xml" href="/kirchhoff-shannon-bridge/favicon.svg"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.5/index.css"><title>두 생애 — 회로·현상·이중의 걸작 · 두 엔트로피</title><link rel="stylesheet" href="/kirchhoff-shannon-bridge/_astro/BaseLayout.DZUjBYdt.css"></head><body><div class="site-wrap"><header class="site-header"><div class="header-inner"><a class="brand" href="/kirchhoff-shannon-bridge/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>두 엔트로피</strong><span>Kirchhoff–Shannon Bridge</span></span></a><nav class="nav" aria-label="주요 메뉴"><a href="/kirchhoff-shannon-bridge/">홈</a><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a><a href="/kirchhoff-shannon-bridge/foundation/00-how-to-read/" class="copper-link">기초</a><a href="/kirchhoff-shannon-bridge/kirchhoff/k-01-circuits-before/" class="copper-link">키르히호프</a><a href="/kirchhoff-shannon-bridge/shannon/s-01-boolean-relays/" class="shannon-link">섀넌</a><a href="/kirchhoff-shannon-bridge/bridge/b-01-conservation-metaphors/" class="shannon-link">다리</a><a href="/kirchhoff-shannon-bridge/glossary/">용어집</a><a href="/kirchhoff-shannon-bridge/lab/">실험실</a></nav></div></header><main class="main"><article class="prose"><div class="track-banner" style="--rail-color: var(--copper)"><span class="stripe" aria-hidden="true"></span><div><span class="badge both">다리 · Bridge</span><span class="badge" style="margin-left:0.35rem">심화</span></div></div><aside class="warning-callout" role="note" aria-label="경고 — S ≠ H"><p class="warn-title"><span aria-hidden="true">⚠</span>경고 — S ≠ H</p><p class="formula"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S \neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord katex-vbox"><span class="katex-thinbox"><span class="rlap"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="katex-inner"><span class="mord"><span class="mrel"></span></span></span><span class="katex-fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span></p><p>열역학·통계역학의 엔트로피 <strong>S</strong>와 정보이론의 섀넌 엔트로피<strong>H</strong>는 기호와 −∑p log p 꼴이 닮았어도<strong>같은 물리량이 아닙니다.</strong> 단위·상태 공간·법칙적 지위가 다릅니다. Bridge 트랙에서 명시적으로 다룹니다.</p></aside><h1 id="두-생애--회로현상이중의-걸작">두 생애 — 회로·현상·이중의 걸작</h1>
+<p>인물 비교는 영웅 서사를 만들기 쉽다. 본 문서는 연대기 나열을 넘어, **업적의 형태(form of achievement)**를 세 축으로 겹친다. 상세 전기는 Phase B <code>k-07-life.md</code>, Phase C <code>s-07-life.md</code>에 두고, 여기서는 Bridge용 <strong>대조 골격</strong>만 단단히 세운다.</p>
+<ul>
+<li>키르히호프(Gustav Robert Kirchhoff, 1824–1887)</li>
+<li>섀넌(Claude Elwood Shannon, 1916–2001)</li>
+</ul>
+<p>한 세기에 가까운 시차, 독일 대학·분광학의 세계와 미국 전기공학·벨 연구소·전시(戰時) 응용의 세계. 「천재성」을 공통항으로 두기보다, <strong>무엇이 젊은 돌파였고, 무엇이 두 번째 거대 작품이었으며, 시대가 무엇을 허용·요구했는지</strong>를 본다.</p>
+<h2 id="축-1-회로를-수학으로--circuits-as-math">축 (1) 회로를 수학으로 — circuits as math</h2>
+<h3 id="키르히호프">키르히호프</h3>
+<p>19세기 중엽의 전기 그물망은 실험과 전신의 대상이었으나, <strong>위상과 선형 제약이 지배하는 대수적 대상</strong>으로 명료히 적힌 것은 키르히호프의 회로 법칙·네트워크 해석에서 결정적 형태를 갖춘다. KCL·KVL은 측량값 사이의 <strong>보편 제약</strong>이며, 가지 전류·루프 전압을 미지수로 하는 연립의 뼈대이다. 「회로」가 손끝의 배선도를 넘어 <strong>수학적 대상</strong>이 된다.</p>
+<h3 id="섀넌">섀넌</h3>
+<p>섀넌의 1937/1938년 석사 논문은 릴레이·스위칭 회로를 **불리언 대수(Boolean algebra)**로 기술한다. 개폐의 실용 공학이 명제 논리의 연산과 동형임을 보인 것은, 「회로를 수학으로」라는 키르히호프적 이상을 <strong>이산·논리</strong>의 영역으로 옮겨 적은 사건이다. 연속 전류의 선형 대수에서, 참·거짓의 격자로.</p>
+<h3 id="겹침과-차이">겹침과 차이</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>키르히호프</th><th>섀넌 (스위칭)</th></tr></thead><tbody><tr><td>대상</td><td>전류·전압의 집결 회로</td><td>릴레이·논리 회로</td></tr><tr><td>언어</td><td>선형 방정식·위상</td><td>불리언 대수</td></tr><tr><td>보존·제약</td><td>전하·에너지(이상화) 제약</td><td>논리 동치·간소화</td></tr><tr><td>시대</td><td>전신·실험실 전기학</td><td>자동교환·계산기 직전</td></tr></tbody></table>
+<p>둘 모두 <strong>현장의 장치를 기호 체계로 환원</strong>한다. 그러나 키르히호프의 환원은 연속량·보존 법칙에, 섀넌의 (초기) 환원은 이산 논리·조합에 무게가 있다. 훗날 섀넌의 통신 이론은 다시 확률·실수 해석을 끌어들이지만, 「회로의 수학화」라는 첫 서명 동작은 논리 쪽에서 울린다.</p>
+<h2 id="축-2-모호한-것을-측정-가능하게--making-the-vague-measurable">축 (2) 모호한 것을 측정 가능하게 — making the vague measurable</h2>
+<h3 id="키르히호프-1">키르히호프</h3>
+<p>분광학에서 「선이 보인다」를 넘어, 방출·흡수의 관계와 흑체 이상을 통해 <strong>복사 현상의 보편 함수</strong>를 묻는다. 「빛과 열의 스펙트럼」이 취향의 묘사가 아니라 <strong>법칙의 자리</strong>에 앉는다. 회로에서도 「대충 흐른다」를 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>I</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum I=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0785em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>의 수지로 바꾼다.</p>
+<h3 id="섀넌-1">섀넌</h3>
+<p>「정보가 많다/적다」「통신이 잘 된다」는 일상어를, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span>·상호정보·용량 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0715em;">C</span></span></span></span>의 <strong>수치화 가능한 정의</strong>와 한계 정리로 바꾼다. 의미론적 모호함(메시지의 중요성)을 의도적으로 괄호에 넣고, <strong>선택과 불확실성</strong>만 남겨 측정의 축을 세운다. 모호함의 제거가 아니라, <strong>모호함의 재정의</strong>이다.</p>
+<h3 id="bridge에서의-교훈">Bridge에서의 교훈</h3>
+<p>두 경우 모두, 성공의 조건은 「직관을 수식으로 옮겼다」는 미담이 아니라,</p>
+<ol>
+<li><strong>조작적 정의</strong> (무엇을 재고, 무엇을 재지 않는가),</li>
+<li><strong>정리로 연결되는 양</strong> (법칙·상한·보편 함수),</li>
+<li><strong>한계의 명시</strong> (이상화·점근·평형)</li>
+</ol>
+<p>을 갖춘 점이다. <code>b-01</code>의 보존 은유, <code>b-02</code>의 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S\neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span> 경고는 바로 이 축의 윤리적 쌍이다: <strong>측정 가능하게 만들되, 다른 측도를 하나로 합치지 말 것.</strong></p>
+<h2 id="축-3-초기-서명-결과--후기-제2의-걸작">축 (3) 초기 서명 결과 + 후기 제2의 걸작</h2>
+<h3 id="키르히호프-2">키르히호프</h3>
+<ul>
+<li><strong>초기·서명</strong>: 회로 법칙과 네트워크 해석 — 전기학의 「문법」. 젊은 시절의 돌파로 읽히는 층.</li>
+<li><strong>제2의 거대 작품</strong>: 분광학·열복사·흑체로 이어지는 광학·복사 연구 — 보편 법칙과 실험의 결합.<br>
+동일 인물이 <strong>회로의 대수</strong>와 <strong>빛의 법칙</strong>을 모두 남긴다는 이중성. (세부 연·우선권 논쟁은 <code>k-07</code>과 과학사 문헌에 맡긴다.)</li>
+</ul>
+<h3 id="섀넌-2">섀넌</h3>
+<ul>
+<li><strong>초기·서명</strong>: 스위칭 회로의 불리언 대수화 — 「디지털의 논리 문법」.</li>
+<li><strong>제2의 거대 작품</strong>: 1948년 전후의 통신·정보 이론 (및 암호·시크릭시 쪽의 큰 기둥) — 「통신의 통계적 문법」.</li>
+</ul>
+<p>젊은 돌파가 이미 세계적 파급을 가졌고, 그 위에 **다른 대상(메시지·잡음·부호)**을 향한 두 번째 체계가 올라간다. 키르히호프의 「회로 / 복사」 이중과, 섀넌의 「논리 회로 / 정보」 이중은 <strong>형태상 공명</strong>한다: <em>early signature result + later second masterpiece.</em></p>
+<h3 id="공명의-한계">공명의 한계</h3>
+<ul>
+<li>키르히호프의 두 영역은 둘 다 <strong>19세기 물리학</strong>의 자장 안에 있다.</li>
+<li>섀넌의 두 영역은 <strong>논리학·전기공학·응용확률</strong>이 교차하는 20세기 제도 안에 있다.</li>
+<li>「이중 걸작」을 운명적 패턴으로 신비화하지 말 것. 기관·전쟁·산업·학술지의 조건이 달랐다.</li>
+</ul>
+<h2 id="시대차-무엇이-달랐는가">시대차: 무엇이 달랐는가</h2>
+<ol>
+<li><strong>매체의 조건</strong> — 전신·분광 사진 vs 전화·무선·레이더·초기 컴퓨터.</li>
+<li><strong>수학의 공기</strong> — 해석·선형대수·고전 열역학 vs 확률론의 측도화·논리학·사이버네틱스 인접.</li>
+<li><strong>직업 구조</strong> — 유럽 대학 교수직 중심 vs 연구소(벨)·대학·전시 프로젝트가 섞인 미국형 경로.</li>
+<li><strong>「정보」라는 단어</strong> — 키르히호프 시대에 오늘의 information theory는 없었고, 섀넌 시대에도 단어의 의미는 고정되기 전이었다.</li>
+</ol>
+<p>젊은 돌파의 나이대만 겹쳐 「천재의 공통 공식」을 만드는 비교는 피한다. 중요한 것은 <strong>돌파가 어떤 문법(회로 / 논리 / 확률)을 세계 표준으로 올렸는가</strong>이다.</p>
+<h2 id="흔한-오개념">「흔한 오개념」</h2>
+<ul>
+<li>「키르히호프는 회로만, 섀넌은 정보만」 — 둘 다 이중의 거대 기여를 갖는다.</li>
+<li>「섀넌이 키르히호프를 직접 계승했다」 — <code>b-03</code>에서 말한 대로 직선 계보 없음.</li>
+<li>「업적 비교는 누구의 지능이 우위인가의 문제」 — 본 문서의 축은 형태·시대·조작적 정의이다.</li>
+</ul>
+<h2 id="한계">한계</h2>
+<p>짧은 대조는 우선권 분쟁, 공동 연구자(분광학의 분젠 등), 벨 연구소 집단의 기여를 평평하게 만든다. 영웅 단독설을 피하려면 <code>k-07</code>, <code>s-07</code>과 더 읽기의 전기·과학사로 돌아갈 것.</p>
+<h2 id="다음으로-넘어가는-이유">다음으로 넘어가는 이유</h2>
+<p>비교의 뼈대를 세운 뒤에는, 독자가 원논문·교과서·백과로 <strong>스스로 깊이를 더할 지도</strong>가 필요하다. <code>b-05</code>가 그 큐레이션이다.</p>
+<hr>
+<h2 id="핵심-정리">핵심 정리</h2>
+<ul>
+<li>세 축: (1) 회로의 수학화, (2) 모호의 측정 가능화, (3) 초기 서명 + 제2의 걸작.</li>
+<li>키르히호프: KCL·KVL / 분광·흑체. 섀넌: 불리언 스위칭 / 정보·통신(·암호).</li>
+<li>형태적 공명은 인정하되, 시대·제도·직선 계보를 혼동하지 말 것.</li>
+</ul>
+<h2 id="연습">연습</h2>
+<ol>
+<li>축 (1)만 사용해, 「집결 회로」와 「릴레이 회로」 각각에서 「수학화」가 무엇을 이산/연속으로 만들었는지 대조하라.</li>
+<li>축 (2)에서 키르히호프와 섀넌이 <strong>의도적으로 재지 않기로 한 것</strong>을 각각 한 가지씩 추정해 쓰라.</li>
+<li>(힌트) 「제2의 걸작」이 첫 걸작의 기호 체계를 재사용하는 정도와, 새로 도입하는 기호 체계의 비중을 두 인물에 대해  qualitatively 평가하라.</li>
+</ol>
+<p><strong>해답 스케치.</strong> (1) 키르히호프: 연속 전류·전압을 선형 미지수로. 섀넌: 개폐를 0/1·논리연산으로. (2) 예: 키르히호프는 (회로 법칙에서) 미시 전하 캐리어의 동역학을 쓰지 않음; 섀넌은 (기본 정보이론에서) 의미·진리치를 쓰지 않음. (3) 키르히호프의 복사는 회로 대수와 도구가 덜 겹침; 섀넌의 정보는 스위칭 논리와 직접 동일하지 않으나 「이산 심볼」감각은 공명 — 확률·부호가 새 기둥.</p>
+<h2 id="더-읽기">더 읽기</h2>
+<ul>
+<li><code>k-07-life.md</code>, <code>s-07-life.md</code></li>
+<li>각 인물 전기·ODNB/백과 항목 (장문 복제 없이 서지).</li>
+<li>과학사: 19세기 분광학, 벨 연구소 역사.</li>
+</ul>
+<h2 id="다음-문서">다음 문서</h2>
+<p>→ <a href="./b-05-further-reading.md">b-05-further-reading.md</a> — 더 읽기: 원논문·교과서·온라인 백과.</p><nav class="prev-next" aria-label="이전·다음 문서"><a href="/kirchhoff-shannon-bridge/bridge/b-03-from-blackbody-to-bit/"><span class="label">← 이전</span>흑체에서 비트로 — 간접적인 개념사</a><a class="next" href="/kirchhoff-shannon-bridge/bridge/b-05-further-reading/"><span class="label">다음 →</span>더 읽기 — 원논문·교과서·백과</a></nav></article></main><footer class="site-footer"><div class="footer-inner"><div><strong>「두 엔트로피」</strong> · Kirchhoff–Shannon Bridge<br><span>한국어 심화 미니 코스 · 2026</span></div><div><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a> ·<a href="/kirchhoff-shannon-bridge/glossary/">용어집</a> ·<a href="/kirchhoff-shannon-bridge/lab/">실험실</a> ·<a href="https://github.com/YgHnSIM/kirchhoff-shannon-bridge">GitHub</a></div><div class="footer-warn">경고: S ≠ H · 열역학 엔트로피 ≠ 섀넌 엔트로피</div></div></footer></div></body></html>

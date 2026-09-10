@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="이진 엔트로피, 직렬 저항 KCL/KVL, BSC 용량 — 작은 인터랙티브 위젯"><meta name="generator" content="Astro v7.3.2"><link rel="icon" type="image/svg+xml" href="/kirchhoff-shannon-bridge/favicon.svg"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-kr@5.2.5/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/ibm-plex-mono@5.2.5/index.css"><title>실험실 · 두 엔트로피</title><link rel="stylesheet" href="/kirchhoff-shannon-bridge/_astro/BaseLayout.DZUjBYdt.css"></head><body><div class="site-wrap"><header class="site-header"><div class="header-inner"><a class="brand" href="/kirchhoff-shannon-bridge/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><strong>두 엔트로피</strong><span>Kirchhoff–Shannon Bridge</span></span></a><nav class="nav" aria-label="주요 메뉴"><a href="/kirchhoff-shannon-bridge/">홈</a><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a><a href="/kirchhoff-shannon-bridge/foundation/00-how-to-read/" class="copper-link">기초</a><a href="/kirchhoff-shannon-bridge/kirchhoff/k-01-circuits-before/" class="copper-link">키르히호프</a><a href="/kirchhoff-shannon-bridge/shannon/s-01-boolean-relays/" class="shannon-link">섀넌</a><a href="/kirchhoff-shannon-bridge/bridge/b-01-conservation-metaphors/" class="shannon-link">다리</a><a href="/kirchhoff-shannon-bridge/glossary/">용어집</a><a href="/kirchhoff-shannon-bridge/lab/" aria-current="page">실험실</a></nav></div></header><main class="main"><div style="max-width:var(--max);margin:0 auto"><h1>실험실</h1><p style="color:var(--ink-muted)">본문의 수식을 손으로 만져 보는 작은 위젯입니다. 증명 대체가 아니라<strong>직관 보정</strong>용입니다. 구리 레일 = 회로, 청록 레일 = 정보.</p><aside class="warning-callout" role="note" aria-label="경고 — S ≠ H"><p class="warn-title"><span aria-hidden="true">⚠</span>경고 — S ≠ H</p><p class="formula"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo mathvariant="normal">≠</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">S \neq H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="katex-base"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord katex-vbox"><span class="katex-thinbox"><span class="rlap"><span class="katex-strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="katex-inner"><span class="mord"><span class="mrel"></span></span></span><span class="katex-fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="katex-base"><span class="katex-strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span></span></span></span></p><p>열역학·통계역학의 엔트로피 <strong>S</strong>와 정보이론의 섀넌 엔트로피<strong>H</strong>는 기호와 −∑p log p 꼴이 닮았어도<strong>같은 물리량이 아닙니다.</strong> 단위·상태 공간·법칙적 지위가 다릅니다. Bridge 트랙에서 명시적으로 다룹니다.</p></aside><section class="lab-panel" data-lab="series-resistor" style="border-top: 3px solid var(--copper)"><h3>직렬 저항 — KCL / KVL 스케치</h3><p style="margin-top:0;color:var(--ink-muted);font-size:0.92rem">전압원 \(V_s\)와 두 저항 \(R_1,R_2\) 직렬. KVL: \(V_s = I R_1 + I R_2\). 같은 전류 \(I\)가 흐른다(KCL의 직렬 함의).</p><div class="lab-row"><div><label for="vs">\(V_s\) (V)</label><input id="vs" type="number" min="0" step="0.1" value="12"></div><div><label for="r1">\(R_1\) (Ω)</label><input id="r1" type="number" min="0.01" step="0.1" value="100"></div><div><label for="r2">\(R_2\) (Ω)</label><input id="r2" type="number" min="0.01" step="0.1" value="200"></div></div><div class="readout" id="k-out" aria-live="polite">…</div></section><script>
+  const vs = document.getElementById('vs');
+  const r1 = document.getElementById('r1');
+  const r2 = document.getElementById('r2');
+  const out = document.getElementById('k-out');
+  function update() {
+    const V = Number(vs.value);
+    const R1 = Number(r1.value);
+    const R2 = Number(r2.value);
+    if (!(R1 > 0 && R2 > 0)) {
+      out.textContent = '저항은 양수여야 합니다.';
+      return;
+    }
+    const Req = R1 + R2;
+    const I = V / Req;
+    const V1 = I * R1;
+    const V2 = I * R2;
+    out.innerHTML =
+      `I = ${I.toFixed(4)} A<br>` +
+      `V₁ = I·R₁ = ${V1.toFixed(4)} V · V₂ = I·R₂ = ${V2.toFixed(4)} V<br>` +
+      `KVL 검산: V₁+V₂ = ${(V1 + V2).toFixed(4)} V ${Math.abs(V1 + V2 - V) < 1e-9 ? '= Vs ✓' : '≠ Vs'}`;
+  }
+  [vs, r1, r2].forEach((el) => el.addEventListener('input', update));
+  update();
+</script><section class="lab-panel" data-lab="binary-entropy" style="border-top: 3px solid var(--cyan)"><h3>이진 엔트로피 \(H(p)\)</h3><p style="margin-top:0;color:var(--ink-muted);font-size:0.92rem">\(H(p) = -p\log_2 p - (1-p)\log_2(1-p)\) (비트). 슬라이더로 \(p\)를 바꿔 보세요.</p><label for="hp-p">베르누이 성공 확률 \(p\)</label><input id="hp-p" type="range" min="0.001" max="0.999" step="0.001" value="0.5"><div class="readout" id="hp-out" aria-live="polite">…</div><canvas id="hp-canvas" width="480" height="160" style="width:100%;margin-top:0.85rem;border-radius:4px;background:var(--cream-dark)"></canvas></section><script>
+  function Hb(p) {
+    if (p <= 0 || p >= 1) return 0;
+    return -p * Math.log2(p) - (1 - p) * Math.log2(1 - p);
+  }
+  const slider = document.getElementById('hp-p');
+  const out = document.getElementById('hp-out');
+  const canvas = document.getElementById('hp-canvas');
+  const ctx = canvas.getContext('2d');
+
+  function draw(p) {
+    const w = canvas.width, h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    ctx.strokeStyle = '#d4cbb8';
+    ctx.beginPath();
+    ctx.moveTo(24, h - 20); ctx.lineTo(w - 10, h - 20);
+    ctx.moveTo(24, 10); ctx.lineTo(24, h - 20);
+    ctx.stroke();
+    ctx.strokeStyle = '#0AA3C2';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = 0; i <= 200; i++) {
+      const x = i / 200;
+      const y = Hb(Math.min(0.999, Math.max(0.001, x)));
+      const px = 24 + x * (w - 34);
+      const py = h - 20 - y * (h - 36);
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+    const px = 24 + p * (w - 34);
+    const py = h - 20 - Hb(p) * (h - 36);
+    ctx.fillStyle = '#B87333';
+    ctx.beginPath();
+    ctx.arc(px, py, 5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  function update() {
+    const p = Number(slider.value);
+    const h = Hb(p);
+    out.textContent = `p = ${p.toFixed(3)}  →  H(p) = ${h.toFixed(4)} bit`;
+    draw(p);
+  }
+  slider.addEventListener('input', update);
+  update();
+</script><section class="lab-panel" data-lab="bsc-capacity" style="border-top: 3px solid var(--cyan)"><h3>BSC 용량 \(C = 1 - H_b(p)\)</h3><p style="margin-top:0;color:var(--ink-muted);font-size:0.92rem">이진 대칭 채널(BSC)의 교차 확률 \(p\). 용량은 \(C = 1 - H_b(p)\) (비트/전송).</p><label for="bsc-p">교차 확률 \(p\)</label><input id="bsc-p" type="range" min="0" max="0.5" step="0.001" value="0.1"><div class="readout" id="bsc-out" aria-live="polite">…</div></section><script>
+  function Hb(p) {
+    if (p <= 0 || p >= 1) return 0;
+    return -p * Math.log2(p) - (1 - p) * Math.log2(1 - p);
+  }
+  const slider = document.getElementById('bsc-p');
+  const out = document.getElementById('bsc-out');
+  function update() {
+    const p = Number(slider.value);
+    const hb = Hb(p);
+    const C = 1 - hb;
+    out.textContent = `p = ${p.toFixed(3)}  →  Hb(p) = ${hb.toFixed(4)}  →  C = ${C.toFixed(4)} bit/use`;
+  }
+  slider.addEventListener('input', update);
+  update();
+</script></div></main><footer class="site-footer"><div class="footer-inner"><div><strong>「두 엔트로피」</strong> · Kirchhoff–Shannon Bridge<br><span>한국어 심화 미니 코스 · 2026</span></div><div><a href="/kirchhoff-shannon-bridge/path/">학습 경로</a> ·<a href="/kirchhoff-shannon-bridge/glossary/">용어집</a> ·<a href="/kirchhoff-shannon-bridge/lab/">실험실</a> ·<a href="https://github.com/YgHnSIM/kirchhoff-shannon-bridge">GitHub</a></div><div class="footer-warn">경고: S ≠ H · 열역학 엔트로피 ≠ 섀넌 엔트로피</div></div></footer></div></body></html>
