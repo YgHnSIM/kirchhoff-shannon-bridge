@@ -32,11 +32,11 @@ summary: 키르히호프의 열복사 법칙(방출능=흡수능), 흑체 정의
 > **키르히호프의 열복사 법칙 (요지).**  
 > 열평형에 있는 물체에 대해, 주어진 파장(및 편광·방향 — 정밀 서술)에서  
 > **방출능 \(e\) 와 흡수율 \(\alpha\) 의 비는 물질에 무관**하며, 온도와 파장만의 함수다.
->
-> \[
-> \frac{e(\lambda,T)}{\alpha(\lambda,T)} = B(\lambda,T).
-> \]
->
+
+\[
+\frac{e(\lambda,T)}{\alpha(\lambda,T)} = B(\lambda,T).
+\]
+
 > 여기서 \(B\) 는 **모든 물질에 공통**인 함수다.
 
 직관적 논증의 뼈대(현대 교과서식 재구성):
@@ -53,10 +53,10 @@ summary: 키르히호프의 열복사 법칙(방출능=흡수능), 흑체 정의
 키르히호프는 **모든 파장의 입사 복사를 완전히 흡수하는** 이상적 물체 — \(\alpha(\lambda)=1\) — 를 논의의 중심에 두었고, 이를 **흑체(schwarzer Körper)** 라 불렀다. 영어 *black body* 도 이 전통을 잇는다.
 
 > **흑체.** \(\alpha(\lambda,T)=1\) (모든 관심 \(\lambda\)) 인 이상체. 법칙에 의해 그 방출능은 곧 보편함수 \(B(\lambda,T)\) 자체다.
->
-> \[
-> e_\mathrm{black}(\lambda,T) = B(\lambda,T).
-> \]
+
+\[
+e_\mathrm{black}(\lambda,T) = B(\lambda,T).
+\]
 
 현실의 “검댕·흑색 도료”는 근사일 뿐이다. 실험실·이론에서 더 좋은 실현은 **작은 구멍을 낸 공동**: 구멍으로 들어간 빛이 벽에서 반복 흡수·산란되어 탈출 확률이 극히 낮아지면, 구멍은 \(\alpha\approx 1\) 인 흑체에 가깝고, 구멍에서 나오는 복사가 공동의 열복사장 — **공동 복사(cavity radiation)** — 를 샘플링한다.
 
@@ -92,21 +92,21 @@ B_\lambda\,d\lambda = B_\nu\,d\nu,\quad \nu=c/\lambda
 
 ## 방사율 언어와의 연결
 
-공학·실험에서는 방출능 \(e\) 대신 **방사율(emissivity)** \(arepsilon(\lambda,T)\) 를 자주 쓴다. 흑체 대비 비로 정의하면
+공학·실험에서는 방출능 \(e\) 대신 **방사율(emissivity)** \(\varepsilon(\lambda,T)\) 를 자주 쓴다. 흑체 대비 비로 정의하면
 
 \[
-arepsilon(\lambda,T) := rac{e(\lambda,T)}{B(\lambda,T)}.
+\varepsilon(\lambda,T) := \frac{e(\lambda,T)}{B(\lambda,T)}.
 \]
 
-키르히호프 법칙 \(e/lpha=B\) 와 합치면, 열평형에서
+키르히호프 법칙 \(e/\alpha=B\) 와 합치면, 열평형에서
 
 \[
-arepsilon(\lambda,T) = lpha(\lambda,T)
+\varepsilon(\lambda,T) = \alpha(\lambda,T)
 \]
 
-이 된다. 이 등식이야말로 현장에서 “방출=흡수”로 줄여 말하는 정확한 버전이다. \(arepsilon\) 와 \(lpha\) 는 둘 다 무차원이므로, “수치가 같다”는 말이 드디어 성립한다. (k-05 오개념 2번에서 경고한 \(e=lpha\) 와의 혼동을 여기서 해소한다.)
+이 된다. 이 등식이야말로 현장에서 “방출=흡수”로 줄여 말하는 정확한 버전이다. \(\varepsilon\) 와 \(\alpha\) 는 둘 다 무차원이므로, “수치가 같다”는 말이 드디어 성립한다. (k-05 오개념 2번에서 경고한 \(e=\alpha\) 와의 혼동을 여기서 해소한다.)
 
-선택적 표면(selective surface) — 태양 파장에서는 \(lpha\) 가 크고, 열적 적외선에서는 \(arepsilon\) 가 작은 코팅 등 — 은 이 언어로 설계된다. 평형 논리가 파장마다 적용되므로, “한 숫자 방사율”은 회색체 근사일 뿐이다.
+선택적 표면(selective surface) — 태양 파장에서는 \(\alpha\) 가 크고, 열적 적외선에서는 \(\varepsilon\) 가 작은 코팅 등 — 은 이 언어로 설계된다. 평형 논리가 파장마다 적용되므로, “한 숫자 방사율”은 회색체 근사일 뿐이다.
 
 ## 흔한 오개념
 

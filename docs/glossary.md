@@ -30,10 +30,10 @@
 | 21 | 내트 | nat | 자연로그를 쓸 때의 정보량 단위. | S |
 | 22 | 확률분포 | probability distribution (\(p\)) | \(p\ge 0\), \(\sum p=1\)인 가능 결과의 가중. | F, S |
 | 23 | 기댓값 | expectation (\(\mathbb{E}\)) | \(\sum g(x)p(x)\). \(H\)는 \(-\log p\)의 기댓값. | F, S |
-| 24 | 조건부 엔트로피 | conditional entropy (\(H(X\|Y)\)) | \(Y\)를 알게 된 뒤 남는 \(X\)의 불확실성. | S |
-| 25 | 상호정보 | mutual information (\(I(X;Y)\)) | \(H(X)-H(X\|Y)\). 한 변수가 다른 변수에 대해 알려 주는 양. | S, B |
+| 24 | 조건부 엔트로피 | conditional entropy (\(H(X\mid Y)\)) | \(Y\)를 알게 된 뒤 남는 \(X\)의 불확실성. | S |
+| 25 | 상호정보 | mutual information (\(I(X;Y)\)) | \(H(X)-H(X\mid Y)\). 한 변수가 다른 변수에 대해 알려 주는 양. | S, B |
 | 26 | 정보원 | source | 기호를 확률적으로 내는 모델. | S |
-| 27 | 채널 | channel | 입력 \(X\)를 출력 \(Y\)로 보내는 잡음·왜곡 모델 \(p(y\|x)\). | S |
+| 27 | 채널 | channel | 입력 \(X\)를 출력 \(Y\)로 보내는 잡음·왜곡 모델 \(p(y\mid x)\). | S |
 | 28 | 채널 용량 | channel capacity (\(C\)) | \(\max_{p(x)} I(X;Y)\). 믿을 수 있는 전송률의 상한. | S |
 | 29 | 소스 코딩 | source coding | 엔트로피에 가깝게 평균 길이를 줄이는 무손실(또는 허용 왜곡) 압축. | S |
 | 30 | 불 대수 | Boolean algebra | 논리합·논리곱·부정으로 참/거짓을 다루는 대수. 릴레이·디지털의 뼈대. | S |

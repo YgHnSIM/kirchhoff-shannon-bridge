@@ -1,11 +1,12 @@
 ---
+import Tex from './Tex.astro';
 ---
 <section class="lab-panel" data-lab="binary-entropy" style="border-top: 3px solid var(--cyan)">
-  <h3>이진 엔트로피 \(H(p)\)</h3>
+  <h3>이진 엔트로피 <Tex tex="H(p)" /></h3>
   <p style="margin-top:0;color:var(--ink-muted);font-size:0.92rem">
-    \(H(p) = -p\log_2 p - (1-p)\log_2(1-p)\) (비트). 슬라이더로 \(p\)를 바꿔 보세요.
+    <Tex tex="H(p) = -p\log_2 p - (1-p)\log_2(1-p)" /> (비트). 슬라이더로 <Tex tex="p" />를 바꿔 보세요.
   </p>
-  <label for="hp-p">베르누이 성공 확률 \(p\)</label>
+  <label for="hp-p">베르누이 성공 확률 <Tex tex="p" /></label>
   <input id="hp-p" type="range" min="0.001" max="0.999" step="0.001" value="0.5" />
   <div class="readout" id="hp-out" aria-live="polite">…</div>
   <canvas id="hp-canvas" width="480" height="160" style="width:100%;margin-top:0.85rem;border-radius:4px;background:var(--cream-dark)"></canvas>
